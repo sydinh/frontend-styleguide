@@ -1,0 +1,44 @@
+{
+  "name": "frontend-styleguide",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.0",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^4.3.1",
+    "react-router-transition": "^1.2.1",
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.4.2",
+    "styled-normalize": "^8.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint:js": "eslint ./src",
+    "lint:js-fix": "eslint --fix ./src"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "eslint": "^5.4.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "description": "https://frontend-styleguide.firebaseapp.com",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sydinh/frontend-styleguide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sydinh/frontend-styleguide/issues"
+  },
+  "homepage": "https://frontend-styleguide.firebaseapp.com/"
+}
