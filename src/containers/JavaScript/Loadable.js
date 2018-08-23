@@ -1,4 +1,4 @@
-import CustomLoadable from '../../components/CustomLoadable';
+import CustomLoadable from '../../components/Loading';
 
 const Loadable = CustomLoadable({
   loader: () => import('./index')

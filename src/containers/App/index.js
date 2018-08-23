@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import * as routes from '../../constants';
 import Nav from '../../components/Nav';
-import AnimatedSwitch from '../AnimatedSwitch';
+import ErrorBoundary from '../../utils/ErrorBoundary';
+import AnimatedSwitch from '../../utils/AnimatedSwitch';
 
 import HTML from '../HTML/Loadable';
 import CSS from '../CSS/Loadable';
@@ -15,7 +16,7 @@ const App = () => (
   <Router>
     <Fragment>
       <Nav />
-      <Fragment>
+      <ErrorBoundary>
         <AnimatedSwitch>
           <Route exact path={ routes.HTML } component={ HTML } />
           <Route path={ routes.CSS } component={ CSS } />
@@ -23,7 +24,7 @@ const App = () => (
           <Route path={ routes.GIT } component={ Git } />
           <Route component={ NotFound } />
         </AnimatedSwitch>
-      </Fragment>
+      </ErrorBoundary>
     </Fragment>
   </Router>
 );
