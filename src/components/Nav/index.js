@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as routes from '../constants';
+import * as routes from '../../constants';
 
 const Nav = () => (
   <nav>

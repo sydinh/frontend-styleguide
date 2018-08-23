@@ -19,11 +19,14 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint:js": "eslint ./src",
-    "lint:js-fix": "eslint --fix ./src"
+    "lint:js-fix": "eslint --fix ./src",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.5",
+    "docz": "^0.10.3",
     "eslint": "^5.4.0",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-react": "^7.11.1"
