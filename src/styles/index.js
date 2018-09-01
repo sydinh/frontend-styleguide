@@ -33,9 +33,7 @@ injectGlobal`
 
   body {
     font: 300 1.2em/1.6 roboto, sans-serif;
-    color: #303030;
     text-rendering: optimizeLegibility;
-    margin: 0 1.5em;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -66,7 +64,7 @@ injectGlobal`
 
   nav a.active {
     color: #294860;
-    background: #FFF;
+    background: #fff;
   }
 
   nav ul {
@@ -77,61 +75,5 @@ injectGlobal`
 
   nav li {
     display: inline-block;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    color: #294860;
-    font-family: "Roboto Condensed", serif;
-    font-weight: 700;
-    margin: 1em 0 0 0;
-  }
-
-  h2 {
-    color: #307699;
-  }
-
-  h3 {
-    color: #303030;
-  }
-
-  h4 {
-    font-weight: 400;
-  }
-
-  p {
-    margin: 0 0 1em 0;
-  }
-
-  code {
-    color: #333;
-    background-color: #f5f5f5;
-    border: 1px solid #dcdcdc;
-    padding: 0 0.25em;
-    font-family: Inconsolata, monospace;
-  }
-
-  pre code {
-    display: block;
-    padding: 0.5em;
-    margin: 0 0 1em;
-  }
-
-  .recommended {
-    color: #438344;
-  }
-
-  .not-recommended {
-    color: #cd0e3e;
-  }
-
-  a > i {
-    color: #307699;
-  }
-
-  a > i:hover {
-    color: black;
   }
 `

@@ -1,26 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import * as routes from '../../constants';
+import { NavLink } from 'react-router-dom';
+import { HTML, CSS, JAVASCRIPT, GIT } from '../../constants/routes';
 
-const Nav = () => (
+const Nav = (props) => (
   <nav>
     <ul>
       <li>
-        <Link to={ routes.HTML }>HTML</Link>
+        <NavLink exact to={ HTML }>HTML</NavLink >
       </li>
       <li>
-        <Link to={ routes.CSS }>CSS</Link>
+        <NavLink exact to={ CSS }>CSS</NavLink >
       </li>
       <li>
-        <Link to={ routes.JAVASCRIPT }>JAVASCRIPT</Link>
+        <NavLink exact to={ JAVASCRIPT }>JAVASCRIPT</NavLink >
       </li>
       <li>
-        <Link to={ routes.GIT }>GIT</Link>
+        <NavLink exact to={ GIT }>GIT</NavLink >
       </li>
     </ul>
     <ul>
-      <li className="source">
-        <a href="https://github.com/sydinh/frontend-styleguide" target="_blank" rel="noopener noreferrer">#source</a>
+      <li>
+        <button onClick={ props.buttonOnClick }>Switch Theme</button>
       </li>
     </ul>
   </nav>
