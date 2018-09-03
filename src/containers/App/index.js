@@ -14,26 +14,29 @@ import AsyncJavaScript from '../JavaScript/Loadable';
 import AsyncGit from '../Git/Loadable';
 import NotFound from '../NotFound/Loadable';
 
+const isNight = localStorage.getItem('isNight') === 'true' ? true : false;
+
 class App extends Component {
   state = {
-    isDay: (localStorage.getItem('isDay') && localStorage.getItem('isDay') === 'true') ? true : false,
+    isNight,
     theme: {},
   }
 
   componentDidMount() {
-    const { isDay } = this.state;
     this.setState({
-      theme: isDay ? dayTheme : nightTheme
+      theme: this.state.isNight ? nightTheme : dayTheme
     })
   }
 
   handleButtonOnClick = () => {
-    const isDay = !this.state.isDay;
-    this.setState({
-      isDay,
-      theme: isDay ? dayTheme : nightTheme
+    this.setState((prevState) => {
+      return {
+        isNight: !prevState.isNight,
+        theme: !prevState.isNight ? nightTheme : dayTheme
+      };
+    }, () => {
+      localStorage.setItem('isNight', this.state.isNight)
     });
-    localStorage.setItem('isDay', isDay)
   }
 
   render() {
@@ -41,7 +44,7 @@ class App extends Component {
       <StyledThemeProvider theme={ this.state.theme }>
         <Router>
           <MainContainer role='main'>
-            <Nav buttonOnClick={ this.handleButtonOnClick } />
+            <Nav buttonOnClick={ this.handleButtonOnClick } isNight={ this.state.isNight } />
             <ErrorBoundary>
               <AnimatedSwitch>
                 <Route exact path={ HTML } component={ AsyncHTML } />

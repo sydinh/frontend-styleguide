@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { HTML, CSS, JAVASCRIPT, GIT } from '../../constants/routes';
 
-const Nav = (props) => (
+const Nav = ({ buttonOnClick, isNight }) => (
   <nav>
     <ul>
       <li>
@@ -20,10 +20,15 @@ const Nav = (props) => (
     </ul>
     <ul>
       <li>
-        <button onClick={ props.buttonOnClick }>Switch Theme</button>
+        <button onClick={ buttonOnClick }>{ isNight ? 'Light' : 'Dark' }</button>
       </li>
     </ul>
   </nav>
 );
 
+Nav.defaultProps  = {
+  isNight: 'Dark'
+};
+
 export default Nav;
+
