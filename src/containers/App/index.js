@@ -5,6 +5,8 @@ import styled, { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import { HTML, CSS, JAVASCRIPT, GIT } from '../../constants/routes';
 import { dayTheme, nightTheme } from '../../constants/themes';
 import Nav from '../../components/Nav';
+import Footer from '../../components/Footer';
+import ScrollToTop from '../../utils/ScrollToTop';
 import ErrorBoundary from '../../utils/ErrorBoundary';
 import AnimatedSwitch from '../../utils/AnimatedSwitch';
 
@@ -14,6 +16,7 @@ import AsyncJavaScript from '../JavaScript/Loadable';
 import AsyncGit from '../Git/Loadable';
 import NotFound from '../NotFound/Loadable';
 
+// eslint-disable-next-line no-undef
 const isNight = localStorage.getItem('isNight') === 'true' ? true : false;
 
 class App extends Component {
@@ -35,6 +38,7 @@ class App extends Component {
         theme: !prevState.isNight ? nightTheme : dayTheme
       };
     }, () => {
+      // eslint-disable-next-line no-undef
       localStorage.setItem('isNight', this.state.isNight)
     });
   }
@@ -43,18 +47,21 @@ class App extends Component {
     return (
       <StyledThemeProvider theme={ this.state.theme }>
         <Router>
-          <MainContainer role='main'>
-            <Nav buttonOnClick={ this.handleButtonOnClick } isNight={ this.state.isNight } />
-            <ErrorBoundary>
-              <AnimatedSwitch>
-                <Route exact path={ HTML } component={ AsyncHTML } />
-                <Route path={ CSS } component={ AsyncCSS } />
-                <Route path={ JAVASCRIPT } component={ AsyncJavaScript } />
-                <Route path={ GIT } component={ AsyncGit } />
-                <Route component={ NotFound } />
-              </AnimatedSwitch>
-            </ErrorBoundary>
-          </MainContainer>
+          <ScrollToTop>
+            <MainContainer role='main'>
+              <Nav buttonOnClick={ this.handleButtonOnClick } isNight={ this.state.isNight } />
+              <ErrorBoundary>
+                <AnimatedSwitch>
+                  <Route exact path={ HTML } component={ AsyncHTML } />
+                  <Route path={ CSS } component={ AsyncCSS } />
+                  <Route path={ JAVASCRIPT } component={ AsyncJavaScript } />
+                  <Route path={ GIT } component={ AsyncGit } />
+                  <Route component={ NotFound } />
+                </AnimatedSwitch>
+              </ErrorBoundary>
+              <Footer />
+            </MainContainer>
+          </ScrollToTop>
         </Router>
       </StyledThemeProvider>
     );
