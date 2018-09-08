@@ -1,5 +1,5 @@
 export const dayTheme = {
-  color: '#000',
+  color: '#0e141f',
   background: '#fff',
 };
 

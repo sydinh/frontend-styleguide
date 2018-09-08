@@ -17,6 +17,7 @@ injectGlobal`
   // router transition
   .switch-wrapper {
     position: relative;
+    min-height: calc(100vh - 50px);
   }
 
   .switch-wrapper > div {
@@ -24,6 +25,8 @@ injectGlobal`
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
+    padding: 20px;
   }
 
   body {
@@ -39,7 +42,8 @@ injectGlobal`
     z-index: 1071;
     padding-right: .5rem;
     padding-left: .5rem;
-    background-color: #563d7c;
+    background-color: #2c3849;
+    color: #fff;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
   }
 
@@ -65,7 +69,7 @@ injectGlobal`
 
   nav a.active,
   nav a:hover {
-    color: #563d7c;
+    color: #2c3849;
     background: #fff;
   }
 `
