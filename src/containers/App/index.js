@@ -16,6 +16,7 @@ import AsyncJavaScript from '../JavaScript/Loadable';
 import AsyncGit from '../Git/Loadable';
 import NotFound from '../NotFound/Loadable';
 
+// eslint-disable-next-line no-undef
 const isNight = localStorage.getItem('isNight') === 'true' ? true : false;
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
         theme: !prevState.isNight ? nightTheme : dayTheme
       };
     }, () => {
+      // eslint-disable-next-line no-undef
       localStorage.setItem('isNight', this.state.isNight)
     });
   }

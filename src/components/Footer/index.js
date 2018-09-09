@@ -12,11 +12,12 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 0;
+
   font-weight: 400;
-  border-top: 1px solid ${ props => props.theme.color };
-  background: ${ props => props.theme.background };
+
   color: ${ props => props.theme.color };
+  background: ${ props => props.theme.background };
+  border-top: 1px solid ${ props => props.theme.color };
 
   a {
     font-weight: 600;
