@@ -23,6 +23,7 @@
     "lint:js-fix": "eslint --fix ./src",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
+    "predeploy": "npm run build",
     "deploy": "firebase deploy"
   },
   "devDependencies": {
