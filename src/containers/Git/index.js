@@ -21,7 +21,7 @@ class Git extends Component {
         <pre>
           <code className="language-bash">
             {`
-              $ git help -g
+              $ echo Hello world
             `}
           </code>
         </pre>
