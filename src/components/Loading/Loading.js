@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Spinner from 'react-spinkit';
 
-const Loading = () => <LoadingContainer>Loading...</LoadingContainer>;
+const Loading = () => (
+  <LoadingContainer>
+    <Spinner name="pacman" color="orange"/>
+  </LoadingContainer>
+)
 
 export default Loading;
 
@@ -10,5 +15,5 @@ const LoadingContainer = styled.section`
   min-height: calc(100vh - 50px);
   display: flex;
   justify-content: center;
-  align-item: center;
+  align-items: center;
 `
