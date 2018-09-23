@@ -6,14 +6,15 @@ import { doSubStrAndUpperCase } from '../../helpers';
 
 class Git extends Component {
   render() {
+    const styleGuide = 'Styleguide';
     const { path } = this.props.match;
     const sillyPath = doSubStrAndUpperCase(path);
 
     return (
       <section>
         <Helmet>
-          <title>Styleguide - {sillyPath}</title>
-          <meta name="description" content="Styleguide - Git" />
+          <title>{styleGuide} - {sillyPath}</title>
+          <meta name="description" content={ `${ styleGuide } - ${ sillyPath }` } />
           <meta name="theme-color" content="#000000" />
         </Helmet>
         <h2>{sillyPath}</h2>
