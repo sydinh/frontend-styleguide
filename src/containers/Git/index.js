@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import withPrism from '../../utils/withPrism';
 import { doSubStrAndUpperCase } from '../../helpers';
+import H1 from '../../components/H1';
 
 class Git extends Component {
   render() {
@@ -17,7 +18,7 @@ class Git extends Component {
           <meta name="description" content={ `${ styleGuide } - ${ sillyPath }` } />
           <meta name="theme-color" content="#000000" />
         </Helmet>
-        <h2>{sillyPath}</h2>
+        <H1>{sillyPath}</H1>
         <pre>
           <code className="language-bash">
             {`
