@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Helmet } from 'react-helmet';
 import withPrism from '../../utils/withPrism';
 import { doSubStrAndUpperCase } from '../../helpers';
@@ -31,7 +32,7 @@ class HTML extends Component {
           <H2>General Formatting Rules</H2>
           <H3>
             <a href="#capitalization" id="capitalization">
-              <i className="fa fa-link"></i>
+              <FontAwesomeIcon icon="link" />
             </a>
             Capitalization
           </H3>
@@ -45,7 +46,7 @@ class HTML extends Component {
               `}
             </code>
           </pre>
-          <H4 className="recommended">Not Recommended:</H4>
+          <H4 className="recommended">Recommended:</H4>
           <pre>
             <code className="language-html">
               {`
