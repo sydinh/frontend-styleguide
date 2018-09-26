@@ -17,4 +17,10 @@ injectGlobal`
   body {
     font: 300 1.2em/1.6 roboto, sans-serif;
   }
+
+  :target:before {
+    content: '';
+    display: block;
+    height: 80px;
+  }
 `
