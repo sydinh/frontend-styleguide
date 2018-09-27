@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Helmet } from 'react-helmet';
 import withPrism from '../../utils/withPrism';
 import { doSubStrAndUpperCase } from '../../helpers';
+
+import H1 from '../../components/H1';
+import H2 from '../../components/H2';
+import H3 from '../../components/H3';
+import H4 from '../../components/H4';
 
 class HTML extends Component {
   render() {
@@ -17,14 +23,38 @@ class HTML extends Component {
           <meta name="description" content={ `${ styleGuide } - ${ sillyPath }` } />
           <meta name="theme-color" content="#000000" />
         </Helmet>
-        <h2>{sillyPath}</h2>
-        <pre>
-          <code className="language-html">
-            {`
-              <h1 class="h1">Styleguide - HTML</h1>
-            `}
-          </code>
-        </pre>
+        <H1>{sillyPath}</H1>
+        <section>
+          <H2>Introduction</H2>
+          <p>...</p>
+        </section>
+        <section>
+          <H2>General Formatting Rules</H2>
+          <H3>
+            <a href="#capitalization" id="capitalization">
+              <FontAwesomeIcon icon="link" />
+            </a>
+            Capitalization
+          </H3>
+          <p>Use only lowercase.</p>
+          <p>All code has to be lowercase. This applies to HTML element names, attributes, attribute values (unless text/CDATA).</p>
+          <H4 className="not-recommended">Not Recommended:</H4>
+          <pre>
+            <code className="language-html">
+              {`
+                <A HREF="/">Home</A>
+              `}
+            </code>
+          </pre>
+          <H4 className="recommended">Recommended:</H4>
+          <pre>
+            <code className="language-html">
+              {`
+                <a href="/">Home</a>
+              `}
+            </code>
+          </pre>
+        </section>
       </section>
     )
   }

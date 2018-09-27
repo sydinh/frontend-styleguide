@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import styled, { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import { HTML, CSS, JAVASCRIPT, GIT } from '../../constants/routes';
@@ -8,7 +8,6 @@ import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 import ScrollToTop from '../../utils/ScrollToTop';
 import ErrorBoundary from '../../utils/ErrorBoundary';
-import AnimatedSwitch from '../../utils/AnimatedSwitch';
 
 import AsyncHTML from '../HTML/Loadable';
 import AsyncCSS from '../CSS/Loadable';
@@ -48,19 +47,19 @@ class App extends Component {
       <StyledThemeProvider theme={ this.state.theme }>
         <Router>
           <ScrollToTop>
+            <Nav buttonOnClick={ this.handleButtonOnClick } isNight={ this.state.isNight } />
             <MainContainer role='main'>
-              <Nav buttonOnClick={ this.handleButtonOnClick } isNight={ this.state.isNight } />
               <ErrorBoundary>
-                <AnimatedSwitch>
+                <Switch>
                   <Route exact path={ HTML } component={ AsyncHTML } />
                   <Route path={ CSS } component={ AsyncCSS } />
                   <Route path={ JAVASCRIPT } component={ AsyncJavaScript } />
                   <Route path={ GIT } component={ AsyncGit } />
                   <Route component={ NotFound } />
-                </AnimatedSwitch>
+                </Switch>
               </ErrorBoundary>
-              <Footer />
             </MainContainer>
+            <Footer />
           </ScrollToTop>
         </Router>
       </StyledThemeProvider>
@@ -73,6 +72,7 @@ export default App;
 const MainContainer = styled.main`
   width: 100%;
   min-height: 100vh;
+  padding: 50px 20px 20px;
   background: ${ props => props.theme.background };
   color: ${ props => props.theme.color };
   transition: all .3s;
