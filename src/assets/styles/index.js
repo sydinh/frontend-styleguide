@@ -21,6 +21,8 @@ injectGlobal`
   :target:before {
     content: '';
     display: block;
+    margin-top: -80px;
     height: 80px;
+    width: 1px;
   }
 `
