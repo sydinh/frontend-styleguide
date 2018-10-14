@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { HTML, CSS, JAVASCRIPT, GIT } from '../../constants/routes';
+import github from '../../assets/images/github.svg';
 
 const Nav = ({ buttonOnClick, isNight }) => (
   <NavContainer>
@@ -21,9 +22,18 @@ const Nav = ({ buttonOnClick, isNight }) => (
       </li>
     </ul>
     <ul>
-      <li>
-        <ButtonSwitchTheme onClick={ buttonOnClick }>{ isNight ? 'Day Mode' : 'Night Mode' }</ButtonSwitchTheme>
-      </li>
+      <GroupButton>
+        <ButtonSwitchTheme
+          onClick={ buttonOnClick }>{ isNight ? 'Day Mode' : 'Night Mode' }
+        </ButtonSwitchTheme>
+        <ButtonSource
+          href="https://github.com/sydinh/frontend-styleguide"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GithubIcon src={ github } alt="" />
+        </ButtonSource>
+      </GroupButton>
     </ul>
   </NavContainer>
 );
@@ -84,25 +94,50 @@ const NavContainer = styled.nav`
   }
 `
 
+const GroupButton = styled.li`
+  display: flex !important;
+  align-items: center !important;
+  height: 36px;
+  border: 1px solid #55637e;
+  border-radius: .5rem;
+
+  * {
+    display: flex !important;
+    align-items: center !important;
+  }
+`;
+
 const ButtonSwitchTheme = styled.button`
   color: #fff;
   cursor: pointer;
-  border: 1px solid #55637e;
-  border-radius: .5rem;
+  border: none;
   font-size: .875rem;
   height: 2.25rem;
   min-width: 100px;
   background-color: transparent;
-  display: inline-block;
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
-  vertical-align: middle;
   user-select: none;
   padding: .375rem .75rem;
-  line-height: 1.5;
+  line-height: 1;
 
   &:focus {
     outline: 0;
   }
 `
+
+const ButtonSource = styled.a`
+  width: 50px;
+  height: 100%;
+  border-left: 1px solid #55637e;
+
+  &:hover {
+    background: transparent !important;
+  }
+`;
+
+const GithubIcon = styled.img`
+  width: 100%;
+  height: 125%;
+`;
