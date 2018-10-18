@@ -13,10 +13,12 @@
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
     "react-loadable": "^5.5.0",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-router-transition": "^1.2.1",
     "react-scripts": "2.0.4",
     "react-spinkit": "^3.0.0",
+    "redux": "^4.0.1",
     "styled-components": "^3.4.2",
     "styled-normalize": "^8.0.0"
   },
@@ -33,10 +35,10 @@
     "deploy": "firebase deploy"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.6",
-    "babel-loader": "^7.1.5",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.4",
     "docz": "^0.10.3",
-    "eslint": "^5.4.0",
+    "eslint": "^5.7.0",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-react": "^7.11.1"
   },
@@ -52,5 +54,11 @@
   "bugs": {
     "url": "https://github.com/sydinh/frontend-styleguide/issues"
   },
-  "homepage": "https://frontend-styleguide.firebaseapp.com/"
+  "homepage": "https://frontend-styleguide.firebaseapp.com/",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
