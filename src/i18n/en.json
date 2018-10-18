@@ -1,0 +1,8 @@
+{
+  "app_name": "Frontend Styleguide",
+  "app_author": "Sy Dinh",
+  "app_author_about_page": "https://sydinh.com",
+  "app_version": "0.1.0",
+  "app_private": false,
+  "app_greeting": "Welcome to my Frontend Styleguide"
+}

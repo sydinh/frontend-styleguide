@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import styled, { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import { connect } from 'react-redux';
 
 import { HTML, CSS, JAVASCRIPT, GIT } from '../../constants/routes';
 import { dayTheme, nightTheme } from '../../constants/themes';
@@ -67,7 +68,13 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    literals: state.literals,
+  };
+}
+
+export default connect(mapStateToProps, null)(App);
 
 const MainContainer = styled.main`
   width: 100%;
@@ -76,4 +83,4 @@ const MainContainer = styled.main`
   background: ${ props => props.theme.background };
   color: ${ props => props.theme.color };
   transition: all .3s;
-`
+`;

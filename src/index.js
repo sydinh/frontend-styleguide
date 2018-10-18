@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import { library }  from '@fortawesome/fontawesome-svg-core';
-import { far } from '@fortawesome/free-regular-svg-icons';
-import { fas } from '@fortawesome/free-solid-svg-icons';
+import { Provider } from 'react-redux';
 
 import './assets/styles';
 import './assets/styles/prism.css';
 
+import store from './store';
 import App from './containers/App';
+
+import { registerFontawesome, registerLanguage } from './init';
 import registerServiceWorker from './registerServiceWorker';
 
-library.add(far, fas);
+const appRoot = document.getElementById('root');
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  appRoot
+);
+
+registerFontawesome();
+registerLanguage();
 registerServiceWorker();
