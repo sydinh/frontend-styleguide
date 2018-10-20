@@ -63,7 +63,7 @@ const NavContainer = styled.nav`
   right: 0;
   left: 0;
 
-  background-color: #0e141f;
+  background: #20232a;
   box-shadow: 0 1rem 5rem -0.5rem #000;
 
   ul {
@@ -89,7 +89,7 @@ const NavContainer = styled.nav`
 
   a.active,
   a:hover {
-    color: #2c3849;
+    color: #20232a;
     background: #fff;
   }
 `

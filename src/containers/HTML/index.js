@@ -29,31 +29,71 @@ class HTML extends Component {
           <p>...</p>
         </section>
         <section>
+
           <H2>General Formatting Rules</H2>
-          <H3>
-            <a href="#capitalization" id="capitalization">
-              <FontAwesomeIcon icon="link" />
-            </a>
-            Capitalization
-          </H3>
-          <p>Use only lowercase.</p>
-          <p>All code has to be lowercase. This applies to HTML element names, attributes, attribute values (unless text/CDATA).</p>
-          <H4 className="not-recommended">Not Recommended:</H4>
-          <pre>
-            <code className="language-html">
-              {`
-                <A HREF="/">Home</A>
-              `}
-            </code>
-          </pre>
-          <H4 className="recommended">Recommended:</H4>
-          <pre>
-            <code className="language-html">
-              {`
-                <a href="/">Home</a>
-              `}
-            </code>
-          </pre>
+
+          <article>
+            <H3>
+              <a href="#capitalization" id="capitalization">
+                <FontAwesomeIcon icon="link" />
+              </a>
+              Capitalization
+            </H3>
+            <p>Use only lowercase.</p>
+            <p>All code has to be lowercase. This applies to HTML element names, attributes, attribute values (unless text/CDATA).</p>
+            <H4 className="not-recommended">Not Recommended:</H4>
+            <pre>
+              <code className="language-html">
+                {`
+                  <A HREF="/">Home</A>
+                `}
+              </code>
+            </pre>
+            <H4 className="recommended">Recommended:</H4>
+            <pre>
+              <code className="language-html">
+                {`
+                  <a href="/">Home</a>
+                `}
+              </code>
+            </pre>
+          </article>
+
+          <article>
+            <H3>
+              <a href="#trailing-whitespace" id="trailing-whitespace">
+                <FontAwesomeIcon icon="link" />
+              </a>
+              Trailing Whitespace
+            </H3>
+            <p>Remove trailing white spaces.</p>
+            <p>Trailing white spaces are unnecessary and can complicate diffs.</p>
+            <H4 className="not-recommended">Not Recommended:</H4>
+            <pre>
+              <code className="language-html">
+                {`
+                  <p>What?</p>__
+                `}
+              </code>
+            </pre>
+            <H4 className="recommended">Recommended:</H4>
+            <pre>
+              <code className="language-html">
+                {`
+                  <p>What?</p>
+                `}
+              </code>
+            </pre>
+
+            <p>If using Sublime Text, this can be done automatically each time you save a file by adding the following to your User Settings JSON file (you should be able to find this within Sublime Text's menu):</p>
+            <pre>
+              <code className="language-javascript">
+                {`
+                  "trim_trailing_white_space_on_save": true
+                `}
+              </code>
+            </pre>
+          </article>
         </section>
       </section>
     )
