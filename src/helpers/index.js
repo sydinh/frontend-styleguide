@@ -1,1 +1,1 @@
-export * from './doSubStrAndUpperCase';
+export * from "./doSubStrAndUpperCase";

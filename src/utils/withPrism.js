@@ -1,5 +1,5 @@
-import React from 'react';
-import Prism from 'prismjs';
+import React from "react";
+import Prism from "prismjs";
 
 const withPrism = Component => {
   class hoc extends React.Component {
@@ -8,9 +8,7 @@ const withPrism = Component => {
     }
 
     render() {
-      return (
-        <Component { ...this.props } />
-      );
+      return <Component {...this.props} />;
     }
   }
 

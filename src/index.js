@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
-import './assets/styles';
-import './assets/styles/prism.css';
+import "./assets/styles";
+import "./assets/styles/prism.css";
 
-import store from './store';
-import App from './containers/App';
+import store from "./store";
+import App from "./containers/App";
 
-import { registerFontawesome, registerLanguage } from './init';
-import registerServiceWorker from './registerServiceWorker';
+import { registerFontawesome, registerLanguage } from "./init";
+import registerServiceWorker from "./registerServiceWorker";
 
-const appRoot = document.getElementById('root');
+const appRoot = document.getElementById("root");
 
 ReactDOM.render(
   <Provider store={store}>

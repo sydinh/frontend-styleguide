@@ -1,8 +1,8 @@
-import { createStore, combineReducers } from 'redux';
-import literals from './literals.js';
+import { createStore, combineReducers } from "redux";
+import literals from "./literals.js";
 
 const rootReducer = combineReducers({
-  literals,
+  literals
   // other reducers...
 });
 

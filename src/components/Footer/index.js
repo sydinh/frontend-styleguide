@@ -1,10 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const Footer = () =>
+const Footer = () => (
   <FooterContainer>
-    <p>Made with love by <a href="https://sydinh.com/" target="_blank" rel="noopener noreferrer">@sydinh</a>.</p>
+    <p>
+      Made with love by{" "}
+      <a
+        href="https://sydinh.github.io/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @sydinh
+      </a>
+      .
+    </p>
   </FooterContainer>
+);
 
 export default Footer;
 
@@ -15,12 +26,12 @@ const FooterContainer = styled.footer`
 
   font-weight: 400;
 
-  color: ${ props => props.theme.color };
-  background: ${ props => props.theme.background };
-  border-top: 1px solid ${ props => props.theme.color };
+  color: ${props => props.theme.color};
+  background: ${props => props.theme.background};
+  border-top: 1px solid ${props => props.theme.color};
 
   a {
     font-weight: 600;
-    color: ${ props => props.theme.color };
+    color: ${props => props.theme.color};
   }
-`
+`;

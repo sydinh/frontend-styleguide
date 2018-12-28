@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class ErrorBoundary extends Component {
   static propTypes = {
     children: PropTypes.element.isRequired
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -16,7 +16,7 @@ class ErrorBoundary extends Component {
     this.setState({
       error: error,
       errorInfo: errorInfo
-    })
+    });
     // You can also log error messages to an error reporting service here
   }
 
@@ -26,10 +26,10 @@ class ErrorBoundary extends Component {
       return (
         <div>
           <h2>Something went wrong.</h2>
-          <details style={ { whiteSpace: 'pre-wrap' } }>
-            { this.state.error && this.state.error.toString() }
+          <details style={{ whiteSpace: "pre-wrap" }}>
+            {this.state.error && this.state.error.toString()}
             <br />
-            { this.state.errorInfo.componentStack }
+            {this.state.errorInfo.componentStack}
           </details>
         </div>
       );

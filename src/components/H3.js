@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const H3 = styled.h3`
   font-size: 24px;
@@ -8,7 +8,7 @@ const H3 = styled.h3`
     display: inline-block;
     margin-right: 10px;
     font-size: 18px;
-    color: ${ props => props.theme.color };
+    color: ${props => props.theme.color};
   }
 `;
 

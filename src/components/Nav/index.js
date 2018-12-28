@@ -1,51 +1,59 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import { HTML, CSS, JAVASCRIPT, GIT } from '../../constants/routes';
-import github from '../../assets/images/github.svg';
+import React from "react";
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { HTML, CSS, JAVASCRIPT, GIT } from "../../constants/routes";
+import github from "../../assets/images/github.svg";
 
 const Nav = ({ buttonOnClick, isNight }) => (
   <NavContainer>
     <ul>
       <li>
-        <NavLink exact to={ HTML }>HTML</NavLink >
+        <NavLink exact to={HTML}>
+          HTML
+        </NavLink>
       </li>
       <li>
-        <NavLink exact to={ CSS }>CSS</NavLink >
+        <NavLink exact to={CSS}>
+          CSS
+        </NavLink>
       </li>
       <li>
-        <NavLink exact to={ JAVASCRIPT }>JAVASCRIPT</NavLink >
+        <NavLink exact to={JAVASCRIPT}>
+          JAVASCRIPT
+        </NavLink>
       </li>
       <li>
-        <NavLink exact to={ GIT }>GIT</NavLink >
+        <NavLink exact to={GIT}>
+          GIT
+        </NavLink>
       </li>
     </ul>
     <ul>
       <GroupButton>
-        <ButtonSwitchTheme
-          onClick={ buttonOnClick }>{ isNight ? 'Day Mode' : 'Night Mode' }
+        <ButtonSwitchTheme onClick={buttonOnClick}>
+          {isNight ? "Day Mode" : "Night Mode"}
         </ButtonSwitchTheme>
         <ButtonSource
           href="https://github.com/sydinh/frontend-styleguide"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GithubIcon src={ github } alt="" />
+          <GithubIcon src={github} alt="" />
         </ButtonSource>
       </GroupButton>
     </ul>
   </NavContainer>
 );
 
-Nav.defaultProps  = {
-  isNight: 'Dark'
+Nav.defaultProps = {
+  isNight: "Dark"
 };
 
 Nav.propTypes = {
   buttonOnClick: PropTypes.any,
-  isNight: PropTypes.bool,
-}
+  isNight: PropTypes.bool
+};
 
 export default Nav;
 
@@ -54,8 +62,8 @@ const NavContainer = styled.nav`
   align-items: center;
   justify-content: space-between;
 
-  padding-right: .5rem;
-  padding-left: .5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 
   position: fixed;
   z-index: 1071;
@@ -84,7 +92,7 @@ const NavContainer = styled.nav`
     color: #fff;
     font-weight: 600;
     text-decoration: none;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
   a.active,
@@ -92,14 +100,14 @@ const NavContainer = styled.nav`
     color: #20232a;
     background: #fff;
   }
-`
+`;
 
 const GroupButton = styled.li`
   display: flex !important;
   align-items: center !important;
   height: 36px;
   border: 1px solid #55637e;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 
   * {
     display: flex !important;
@@ -111,7 +119,7 @@ const ButtonSwitchTheme = styled.button`
   color: #fff;
   cursor: pointer;
   border: none;
-  font-size: .875rem;
+  font-size: 0.875rem;
   height: 2.25rem;
   min-width: 100px;
   background-color: transparent;
@@ -119,13 +127,13 @@ const ButtonSwitchTheme = styled.button`
   text-align: center;
   white-space: nowrap;
   user-select: none;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   line-height: 1;
 
   &:focus {
     outline: 0;
   }
-`
+`;
 
 const ButtonSource = styled.a`
   width: 50px;
