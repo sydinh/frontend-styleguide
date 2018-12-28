@@ -1,4 +1,4 @@
-const loadLang = (lang = "en") => {
+const loadLang = (lang = 'en') => {
   return import(`./${lang}.json`);
 };
 

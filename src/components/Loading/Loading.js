@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Spinner from "react-spinkit";
+import React from 'react';
+import styled from 'styled-components';
+import Spinner from 'react-spinkit';
 
 const Loading = () => (
   <LoadingContainer>

@@ -1,5 +1,5 @@
-import Loadable from "react-loadable";
-import Loading from "./Loading";
+import Loadable from 'react-loadable';
+import Loading from './Loading';
 
 const CustomLoadable = loader => {
   return Loadable({ ...loader, loading: Loading });

@@ -1,35 +1,33 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import styled, {
-  ThemeProvider as StyledThemeProvider
-} from "styled-components";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import styled, { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import { connect } from 'react-redux';
 
-import { HTML, CSS, JAVASCRIPT, GIT } from "../../constants/routes";
-import { dayTheme, nightTheme } from "../../constants/themes";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
-import ScrollToTop from "../../utils/ScrollToTop";
-import ErrorBoundary from "../../utils/ErrorBoundary";
+import { HTML, CSS, JAVASCRIPT, GIT } from '../../constants/routes';
+import { dayTheme, nightTheme } from '../../constants/themes';
+import Nav from '../../components/Nav';
+import Footer from '../../components/Footer';
+import ScrollToTop from '../../utils/ScrollToTop';
+import ErrorBoundary from '../../utils/ErrorBoundary';
 
-import AsyncHTML from "../HTML/Loadable";
-import AsyncCSS from "../CSS/Loadable";
-import AsyncJavaScript from "../JavaScript/Loadable";
-import AsyncGit from "../Git/Loadable";
-import NotFound from "../NotFound/Loadable";
+import AsyncHTML from '../HTML/Loadable';
+import AsyncCSS from '../CSS/Loadable';
+import AsyncJavaScript from '../JavaScript/Loadable';
+import AsyncGit from '../Git/Loadable';
+import NotFound from '../NotFound/Loadable';
 
 // eslint-disable-next-line no-undef
-const isNight = localStorage.getItem("isNight") === "true" ? true : false;
+const isNight = localStorage.getItem('isNight') === 'true' ? true : false;
 
 class App extends Component {
   state = {
     isNight,
-    theme: {}
+    theme: {},
   };
 
   componentDidMount() {
     this.setState({
-      theme: this.state.isNight ? nightTheme : dayTheme
+      theme: this.state.isNight ? nightTheme : dayTheme,
     });
   }
 
@@ -38,13 +36,13 @@ class App extends Component {
       prevState => {
         return {
           isNight: !prevState.isNight,
-          theme: !prevState.isNight ? nightTheme : dayTheme
+          theme: !prevState.isNight ? nightTheme : dayTheme,
         };
       },
       () => {
         // eslint-disable-next-line no-undef
-        localStorage.setItem("isNight", this.state.isNight);
-      }
+        localStorage.setItem('isNight', this.state.isNight);
+      },
     );
   };
 
@@ -53,10 +51,7 @@ class App extends Component {
       <StyledThemeProvider theme={this.state.theme}>
         <Router>
           <ScrollToTop>
-            <Nav
-              buttonOnClick={this.handleButtonOnClick}
-              isNight={this.state.isNight}
-            />
+            <Nav buttonOnClick={this.handleButtonOnClick} isNight={this.state.isNight} />
             <MainContainer role="main">
               <ErrorBoundary>
                 <Switch>
@@ -78,13 +73,13 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    literals: state.literals
+    literals: state.literals,
   };
 };
 
 export default connect(
   mapStateToProps,
-  null
+  null,
 )(App);
 
 const MainContainer = styled.main`

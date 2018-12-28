@@ -1,6 +1,6 @@
 const defaultState = {};
 
-const LOAD_LITERALS = "frontendStyleguide/LOAD_LITERALS";
+const LOAD_LITERALS = 'frontendStyleguide/LOAD_LITERALS';
 
 export default (state = defaultState, { type, payload }) => {
   switch (type) {
@@ -14,6 +14,6 @@ export default (state = defaultState, { type, payload }) => {
 export const loadLiterals = literals => {
   return {
     type: LOAD_LITERALS,
-    payload: literals
+    payload: literals,
   };
 };

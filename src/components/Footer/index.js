@@ -1,15 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Footer = () => (
   <FooterContainer>
     <p>
-      Made with love by{" "}
-      <a
-        href="https://sydinh.github.io/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      Made with love by{' '}
+      <a href="https://sydinh.github.io/" target="_blank" rel="noopener noreferrer">
         @sydinh
       </a>
       .

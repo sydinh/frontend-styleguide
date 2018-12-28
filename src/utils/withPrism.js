@@ -1,5 +1,5 @@
-import React from "react";
-import Prism from "prismjs";
+import React from 'react';
+import Prism from 'prismjs';
 
 const withPrism = Component => {
   class hoc extends React.Component {

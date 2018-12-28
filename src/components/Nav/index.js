@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
-import { HTML, CSS, JAVASCRIPT, GIT } from "../../constants/routes";
-import github from "../../assets/images/github.svg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import { HTML, CSS, JAVASCRIPT, GIT } from '../../constants/routes';
+import github from '../../assets/images/github.svg';
 
 const Nav = ({ buttonOnClick, isNight }) => (
   <NavContainer>
@@ -32,7 +32,7 @@ const Nav = ({ buttonOnClick, isNight }) => (
     <ul>
       <GroupButton>
         <ButtonSwitchTheme onClick={buttonOnClick}>
-          {isNight ? "Day Mode" : "Night Mode"}
+          {isNight ? 'Day Mode' : 'Night Mode'}
         </ButtonSwitchTheme>
         <ButtonSource
           href="https://github.com/sydinh/frontend-styleguide"
@@ -47,12 +47,12 @@ const Nav = ({ buttonOnClick, isNight }) => (
 );
 
 Nav.defaultProps = {
-  isNight: "Dark"
+  isNight: 'Dark',
 };
 
 Nav.propTypes = {
   buttonOnClick: PropTypes.any,
-  isNight: PropTypes.bool
+  isNight: PropTypes.bool,
 };
 
 export default Nav;

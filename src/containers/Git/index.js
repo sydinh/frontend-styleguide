@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { Helmet } from "react-helmet";
-import PropTypes from "prop-types";
-import withPrism from "../../utils/withPrism";
-import { doSubStrAndUpperCase } from "../../helpers";
-import H1 from "../../components/H1";
+import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
+import withPrism from '../../utils/withPrism';
+import { doSubStrAndUpperCase } from '../../helpers';
+import H1 from '../../components/H1';
 
 class Git extends Component {
   render() {
-    const styleGuide = "Styleguide";
+    const styleGuide = 'Styleguide';
     const { path } = this.props.match;
     const sillyPath = doSubStrAndUpperCase(path);
 
@@ -35,7 +35,7 @@ class Git extends Component {
 
 Git.propTypes = {
   match: PropTypes.object,
-  path: PropTypes.string
+  path: PropTypes.string,
 };
 
 export default withPrism(Git);

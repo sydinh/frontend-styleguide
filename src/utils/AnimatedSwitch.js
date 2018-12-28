@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { AnimatedSwitch } from "react-router-transition";
+import React, { Component } from 'react';
+import { AnimatedSwitch } from 'react-router-transition';
 
 const animate = {
   atEnter: { opacity: 0 },
   atLeave: { opacity: 0 },
-  atActive: { opacity: 1 }
+  atActive: { opacity: 1 },
 };
 
 class RouterTransition extends Component {
